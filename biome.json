@@ -70,7 +70,7 @@
       "correctness": {
         "noChildrenProp": "off",
         "noNestedComponentDefinitions": "warn",
-        "noUnusedImports": "warn",
+        "noUnusedImports": "error",
         "noUnusedVariables": "warn",
         "useExhaustiveDependencies": "warn",
         "useHookAtTopLevel": "error",
@@ -95,6 +95,7 @@
             "syntax": "shorthand"
           }
         },
+        "useConsistentCurlyBraces": "warn",
         "useConst": "error",
         "useDefaultParameterLast": "error",
         "useExportType": "error",
