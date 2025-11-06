@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Tracktor/biome-config-react/compare/v1.3.0...v1.4.0) (2025-11-06)
+
+
+### ✨ Features
+
+* update biome.json correctness rules and bump biome version to 2.3.4 ([74942ae](https://github.com/Tracktor/biome-config-react/commit/74942ae788b09a40d22ee287b2a6baa88d956e79))
+
 ## [1.3.0](https://github.com/Tracktor/biome-config-react/compare/v1.2.0...v1.3.0) (2025-10-24)
 
 
