@@ -1,6 +1,6 @@
 {
   "name": "@getsoren/biome-config-react",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Shared Biome config for React projects",
   "main": "biome.json",
   "files": [
