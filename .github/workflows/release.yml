@@ -1,16 +1,17 @@
-name: 🚀 Release & Publish
+name: 🚀 Release
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+  id-token: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
 
     steps:
       - name: 🛎️ Checkout
@@ -44,16 +45,18 @@ jobs:
           git push origin HEAD:${{ github.ref }}
           git push --tags
 
-      - name: 🔐 Setup npm token
+      - name: 📝 Create GitHub Release
         if: steps.bump.outputs.prev_version != steps.bump.outputs.new_version
+        run: gh release create "${{ steps.bump.outputs.new_version }}" -F CHANGELOG.md
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
-          npm whoami
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔐 Setup npm auth
+        if: steps.bump.outputs.prev_version != steps.bump.outputs.new_version
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
 
       - name: 📤 Publish to npm
         if: steps.bump.outputs.prev_version != steps.bump.outputs.new_version
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: npm publish --access public

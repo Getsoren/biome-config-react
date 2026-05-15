@@ -1,40 +1,44 @@
 {
-	"name": "@tracktor/biome-config-react",
-	"version": "1.4.0",
-	"description": "Tracktor shared Biome config for React projects",
-	"main": "biome.json",
-	"files": [
-		"biome.json",
-		"README.md"
-	],
-	"scripts": {
-		"release": "commit-and-tag-version"
-	},
-	"license": "MIT",
-	"author": "Kevin Graff",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:Tracktor/biome-config-react.git"
-	},
-	"bugs": {
-		"url": "https://github.com/Tracktor/biome-config-react/issues"
-	},
-	"homepage": "https://github.com/Tracktor/biome-config-react#readme",
-	"peerDependencies": {
-		"@biomejs/biome": ">=2.0.0"
-	},
-	"dependencies": {
-		"@biomejs/biome": "^2.3.4"
-	},
-	"keywords": [
-		"react",
-		"biome",
-		"linter",
-		"formatter",
-		"javascript",
-		"typescript"
-	],
-	"devDependencies": {
-		"commit-and-tag-version": "^12.6.0"
-	}
+  "name": "@getsoren/biome-config-react",
+  "version": "1.4.0",
+  "description": "Shared Biome config for React projects",
+  "main": "biome.json",
+  "files": [
+    "biome.json",
+    "README.md"
+  ],
+  "scripts": {
+    "release": "commit-and-tag-version"
+  },
+  "license": "MIT",
+  "author": "Kevin Graff",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getsoren/biome-config-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/getsoren/biome-config-react/issues"
+  },
+  "homepage": "https://github.com/getsoren/biome-config-react#readme",
+  "peerDependencies": {
+    "@biomejs/biome": ">=2.0.0"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^2.3.4"
+  },
+  "keywords": [
+    "react",
+    "biome",
+    "linter",
+    "formatter",
+    "javascript",
+    "typescript"
+  ],
+  "devDependencies": {
+    "commit-and-tag-version": "^12.6.0"
+  },
+  "commit-and-tag-version": {
+    "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]",
+    "tagPrefix": ""
+  }
 }
