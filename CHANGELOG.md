@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.4.2](https://github.com/getsoren/biome-config-react/compare/v1.4.0...v1.4.2) (2026-06-16)
+
+
+### 🐛 Fixes
+
+* change noUnusedVariables rule from warn to error in biome.json ([ebd50bc](https://github.com/getsoren/biome-config-react/commit/ebd50bc398c7de9d1ee1421fd602a818fa3b4fcc))
+
 ## [1.4.0](https://github.com/Tracktor/biome-config-react/compare/v1.3.0...v1.4.0) (2025-11-06)
 
 
