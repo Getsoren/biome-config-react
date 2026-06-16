@@ -71,7 +71,7 @@
         "noChildrenProp": "off",
         "noNestedComponentDefinitions": "warn",
         "noUnusedImports": "error",
-        "noUnusedVariables": "warn",
+        "noUnusedVariables": "error",
         "useExhaustiveDependencies": "warn",
         "useHookAtTopLevel": "error",
         "useJsxKeyInIterable": "warn",
